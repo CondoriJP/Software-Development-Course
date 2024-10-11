@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ebf5fb;
+    font-family: -apple-system,BlinkMacSystemFont;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    height: auto !important;
+    padding: 10px;
+    background-color: #a3e4d7; 
+}
+
+div {
+    display: block;
+}
+
+.contenedor {
+    padding: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contenedor_interno {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 80px;
+    background: #d6eaf8;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.box2 {
+    display: grid;
+    background: #aed6f1;
+    border-radius: 15px;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.box3 {
+    grid-column: 1 / 3;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+    background: #85c1e9;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+.seccion {
+    margin: 25px;
+}
+
+.titulo {
+    color: #566573;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 5px;
+    text-align: center;
+    justify-items: center;
+}
+
+.subtitulo {
+    color: #566573;
+    font-size:16px;
+    margin: 5px 5px;
+}
+
+.texto1 {
+    background: #ebf5fb;
+    width: 100%;
+    color: #566573;
+    font-size: 0.8em;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    border-top: 5px solid #73c6b6;
+}
+
+.texto1:hover {
+    background: #d6eaf8;
+    border-top: 5px solid #DE3163;
+}
+
+.texto2 {
+    text-align: center;
+    color: #566573;
+    font-size: 1.5vw;
+    margin: 5px 5px;
+}
+
+.contenedor_caja1 {
+    background: #6495ED;
+    height: 25vw;
+    width: 25vw;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.contenedor_caja1:hover {
+    background: #85c1e9;
+    position: relative;
+}
+
+.caja1A {
+    background: blue;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    position: absolute;
+    top: 70px;
+    left: 15px;
+}
+
+.caja1B {
+    background: orange;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    position: absolute;
+    top: 90px;
+    left: 45px;
+}
+
+.contenedor_caja2 {
+    background: #6495ED;
+    height: 25vw;
+    width: 25vw;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.contenedor_caja2:hover {
+    background: #85c1e9;
+    .caja2A {
+        top: 100px;
+        left: 15px;
+    }
+    .caja2B {
+        top: 100px;
+        left: 120px;
+    }
+}
+
+.caja2A {
+    background: red;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+}
+
+.caja2B {
+    background: green;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    position: absolute;
+    top: 80px;
+    left: 35px;
+}
+
+.box4 {
+    display: grid;
+    background: #aed6f1;
+    border-radius: 15px;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.box5 {
+    background: #85c1e9;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contenedor2 {
+    background: #2c3e50;
+    margin: 15px;
+    width: 50vw;
+    height: 75vh;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sol {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-image:url('http://sdo.gsfc.nasa.gov/assets/img/latest/latest_256_HMIIF.jpg');
+    background-size: 100px;
+    animation: girar 10s linear infinite;
+}
+
+.tierra {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/220px-The_Earth_seen_from_Apollo_17.jpg');
+    background-size: 50px;
+    position: relative;
+    top: 100%;
+    left: 100%;
+    animation: girar 2s linear infinite;
+    animation: orbitar 10s linear infinite;
+    transform-origin: -50px -50px;
+}
+
+.luna {
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+    border: 3px solid black;
+    background: white;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    animation: girar 2s linear infinite;
+    animation: orbitar2 5s linear infinite;
+    transform-origin: -25px -25px;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitar {
+     0% {
+        transform: rotate(0deg) translateX(40px);
+     }
+    100% {
+        transform: rotate(360deg) translateX(40px);
+    }
+}
+
+@keyframes orbitar2 {
+     0% {
+        transform: rotate(0deg) translateX(-5px);
+     }
+    100% {
+        transform: rotate(360deg) translateX(-5px);
+    }
+}
